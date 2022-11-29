@@ -1,0 +1,12 @@
+{
+  "name": "adventofcode",
+  "repository": "git@github.com:burtek/adventofcode-solutions.git",
+  "author": "Bartosz Dotryw <burtekdotryw@gmail.com>",
+  "devDependencies": {
+    "@types/node": "^18.11.9",
+    "eslint": "^8.28.0"
+  },
+  "scripts": {
+    "c": "node lib/create.mjs"
+  }
+}
