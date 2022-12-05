@@ -10,12 +10,12 @@ const OPENER_TO_CLOSER = {
   '{': '}',
   '<': '>',
 };
-const CLOSER_TO_OPENER = {
-  ')': '(',
-  ']': '[',
-  '}': '{',
-  '>': '<',
-};
+// const CLOSER_TO_OPENER = {
+//   ')': '(',
+//   ']': '[',
+//   '}': '{',
+//   '>': '<',
+// };
 const ERROR_WEIGHTS = {
   ')': 3,
   ']': 57,
@@ -47,7 +47,7 @@ function parseLine(line) {
       if (!lastOpener || OPENER_TO_CLOSER[lastOpener] !== line[i]) {
         return { error: true, weight: ERROR_WEIGHTS[line[i]] };
       } else if (openers.length === 0) {
-        const start = globalChunks[globalChunks.length - 1]?.end ?? 0;
+        const start = globalChunks.at(-1)?.end ?? 0;
         const end = i + 1;
         globalChunks.push({ start, end, chunk: line.substring(start, end) });
       }

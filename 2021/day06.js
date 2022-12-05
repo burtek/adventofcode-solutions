@@ -9,8 +9,6 @@ timers.forEach(t => { initialCounts[t]++; });
 
 // PART 1
 
-const DAYS = 80;
-
 /**
  * @param {number} daysLeft
  * @returns {number}
